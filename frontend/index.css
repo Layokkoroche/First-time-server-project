@@ -1,0 +1,117 @@
+body {
+    background: #090216;
+    font-family: Verdana;
+    text-align: center;
+}
+
+.smth {
+    display: flex;
+    flex-direction: column;
+    background: #0c0321;;
+    padding-bottom: 5px;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: fit-content; 
+    justify-self: center;
+    border-radius: 40px;
+}
+
+.smth h1 {
+    color: rgb(255, 76, 219);
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.controls {
+    margin: 20px;
+
+}
+
+.controls input {
+    color: rgb(147, 13, 147);
+    background: rgb(234, 176, 220);
+
+    border-radius: 7px;
+    border: none;            /* Сложно объяснить, убери, сам увидешь (на кнопке лучше видно)*/
+}
+
+.controls button {
+    color: rgb(32, 1, 30);
+    font-weight: bold;
+    font-size: 11px;
+
+    background: rgb(147, 13, 147);
+    padding: 5px;
+    border-radius: 7px;
+    border: none;            /* Сложно объяснить, убери, сам увидешь */
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+}
+
+.gallery {
+    display: inline-flex;
+    justify-content: center; /* Выравнивание по X */
+    align-items: center;     /* Выравнивание по Y */
+    margin: 20px;
+
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(62, 2, 73);
+}
+
+.gallery img {
+    transition: 0.3s;        /* делает это не моментально */
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+
+    padding: 3px;
+    background: #290938;
+}
+
+.gallery img:hover {
+    filter: brightness(70%); /* меняет яркость картинке */
+    transform: scale(1.1);   /* можно также увеличить через width и height, но тогда внешний блок тоже увеличится */
+}
+
+.text-display {
+    color: rgb(255, 76, 219);
+    justify-self: center;
+    max-width: 700px;
+    padding: 10px;
+    background: rgb(62, 2, 73);
+    border-radius: 10px;
+
+    transform: scale(0.9);
+    opacity: 0.6;            /* видимость */
+    transition: 0.3s;
+}
+
+.text-display.show {
+    transform: scale(1);
+    opacity: 1; 
+    transition: 0.7s;
+}
+
+.square {
+    width: 15vw;
+    height: 100vh;           /* вся высота окна */
+    background: #0c0321;
+    border-radius: 10px;
+
+    position: fixed;         /* чтобы всегда оставались на месте */
+    top: 0;                  /* сверху окна */
+    z-index: -1;             /* помещает на задний план */
+}
+
+.square.left {
+    left: -1;                /* слева */
+}
+.square.right {
+    right: 0;                /* cправа */
+}
+
